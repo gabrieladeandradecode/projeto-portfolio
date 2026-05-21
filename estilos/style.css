@@ -15,11 +15,11 @@
 }
 
 :root {
-  --fundo-principal:#f5f5f5;
+  --fundo-principal: #f5f5f5;
   --texto: #222222;
   --texto-inverso: #ffffff;
-  --destaque: #0077ff;
-  --destaque-inverso: #66bbff;
+  --destaque: #8b5cf6; /* lilás principal */
+  --destaque-inverso: #9f7aea; /* lilás claro */
   --fundo-card: #ffffff;
 }
 
@@ -28,6 +28,16 @@ body {
   line-height: 1.5em;
   background-color: var(--fundo-principal);
   color: var(--texto);
+  transition: background-color 0.5s;
+}
+
+body.escuro {
+  --fundo-principal: #121212;
+  --fundo-card: #1e1e1e;
+  --texto: #eaeaea;
+  --texto-inverso: #121212;
+  --destaque: #a78bfa; /* lilás visível no escuro */
+  --destaque-inverso: #ede9fe;;
 }
 
 header {
@@ -189,7 +199,6 @@ article h2 {
 
 #formacao-container .curso:hover {
   border-left-width: 15px;
-  cursor: pointer;
   border-color: var(--destaque);
 }
 
